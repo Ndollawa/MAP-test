@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer{
+
+body{
+  width: 100%; 
+  overflow: auto;
+  font-size: 0.825rem;
+
+}
+
+}
+*,*:after,*:before{
+  box-sizing: border-box;
+  transition: background-color 0.3s ease;
+  margin: 0;
+  padding: 0;
+
+
+}
