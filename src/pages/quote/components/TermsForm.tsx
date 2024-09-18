@@ -16,6 +16,7 @@ const TermsForm = ({ onNext, onPrev }) => {
      
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
         <div>
+        <div className="mb-2 block">
           <Label htmlFor="paymentTerms" value="Payment Terms" />
         
           <Select
@@ -29,9 +30,11 @@ const TermsForm = ({ onNext, onPrev }) => {
                         </option>
                       ))}
                     </Select>
+                    </div>
         </div>
         <div>
          
+        <div className="mb-2 block">
           <Label htmlFor="deliverySchedule" value="Delivery Schedule" />
           <Select
                       {...register(`deliverySchedule`, { required: true })}
@@ -44,10 +47,12 @@ const TermsForm = ({ onNext, onPrev }) => {
                         </option>
                       ))}
                     </Select>
+                    </div>
         </div>
 
 
         <div>
+        <div className="mb-2 block">
           <Label htmlFor="shippingMethod" value="Shipping Method" />
           <Select
                       {...register(`shippingMethod`, { required: true })}
@@ -60,9 +65,8 @@ const TermsForm = ({ onNext, onPrev }) => {
                         </option>
                       ))}
                     </Select>
+                    </div>
         </div>
-      </div>
-
           <div>
               <div className="mb-2 block">
                 <Label htmlFor="leadTime" value="Lead Time (Days)" />
@@ -74,6 +78,8 @@ const TermsForm = ({ onNext, onPrev }) => {
                 type="number"
               />
             </div>
+      </div>
+
       {/* File Upload */}
       <div>
         <div className="">

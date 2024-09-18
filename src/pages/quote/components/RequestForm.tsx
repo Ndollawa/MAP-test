@@ -5,7 +5,7 @@ import { FaDollarSign } from "react-icons/fa";
 import { FaTrashCan } from "react-icons/fa6";
 import { calendarTheme } from "../../../app/utils/flowbiteThemes";
 import { IoCalendarClearOutline } from "react-icons/io5";
-import { RFQ } from "../../../app/interfaces/quote.interface";
+import { Item, RFQ } from "../../../app/interfaces/quote.interface";
 
 const RequestForm = ({ onNext }: any) => {
   const [text, setText] = useState('');
@@ -26,7 +26,7 @@ const RequestForm = ({ onNext }: any) => {
 
   const { register, control, handleSubmit, watch } = useForm<RFQ>({
     defaultValues: {
-      items: [{ item: "", variant: "", quantity: "", price: "", expectedDate: "" }],
+      items: [{ item: "", variant: "", quantity: "", price: "", expectedDate: "" }] as Item[] ,
       expectedDeliveryDate: "",
       note: "",
     },
@@ -106,7 +106,6 @@ const RequestForm = ({ onNext }: any) => {
                     value={field.value}
                     onSelectedDateChanged={field.onChange}
                     theme={calendarTheme}
-                    datepicker-format="yyyy-mm-dd"
                     sizing="sm"
                      placeholder="2024-12-1"
                   />
@@ -119,9 +118,9 @@ const RequestForm = ({ onNext }: any) => {
 
           {/* Items Section */}
           <div>
-            <h3 className="text-lg font-medium cursor-pointer"   onClick={() => append({})}>Add Items</h3>
+            <h3 className="text-lg font-medium cursor-pointer mb-5"   onClick={() => append({})}>Add Items</h3>
 
-            <div className="overflow-x-auto w-full">
+            <div className="w-full">
       <Table className="w-full">
         <Table.Head className="capitalize">
           <Table.HeadCell>Items</Table.HeadCell>
