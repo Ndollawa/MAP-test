@@ -11,6 +11,7 @@ import Building from "./svgs/Building";
 import Box from "./svgs/Box";
 import UserImage from "./images/users/Image.png";
 import Logo from "./images/logo.png";
+import MusicIcon from "./images/musicicon.png";
 
 
 
@@ -27,6 +28,7 @@ export{
     Building as BuildingSvg,
     Box as BoxSvg,
     UserImage,
-    Logo
+    Logo,
+    MusicIcon
 
 }

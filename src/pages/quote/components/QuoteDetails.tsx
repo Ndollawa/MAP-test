@@ -1,8 +1,9 @@
 import { IoIosArrowDown } from "react-icons/io";
-import { BuildingSvg, SignDocSvg } from "../../../assets";
+import { BuildingSvg, MusicIcon, SignDocSvg, UserImage } from "../../../assets";
 import { RxCross2 } from "react-icons/rx";
 import { Link } from "react-router-dom";
 import { Checkbox, Table } from "flowbite-react";
+import { FaEdit, FaTrashAlt } from "react-icons/fa";
 
 const QuoteDetails = () => {
     return (
@@ -89,107 +90,132 @@ const QuoteDetails = () => {
 <div className="p-3 border border-gray-200 w-full rounded-lg mb-5">
   <h3 className="font-bold mb-5 text-base">Item(s)</h3>
 <div className="relative overflow-x-auto  sm:rounded-lg">
-    <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-        <thead className="text-xs text-gray-700 bg-gray-100 dark:bg-gray-700 dark:text-gray-400">
-            <tr>
-                <th scope="col" className="p-4">
-                    <div className="flex items-center">
-                        <input id="checkbox-all-search" type="checkbox" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded-md focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
-                        <label htmlFor="checkbox-all-search" className="sr-only">checkbox</label>
-                    </div>
-                </th>
-                <th className="py-2 px-4">Item</th>
-                <th className="py-2 px-4">Variant</th>
-                <th className="py-2 px-4">Quantity</th>
-                <th className="py-2 px-4">Price</th>
-                <th className="py-2 px-4">Amount</th>
-                <th className="py-2 px-4">Expected Delivery Date</th>
-                <th className="py-2 px-4">Action</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                <td className="w-4 p-4">
-                    <div className="flex items-center">
-                        <input id="checkbox-table-search-1" type="checkbox" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded-md focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"/>
-                        <label htmlFor="checkbox-table-search-1" className="sr-only">checkbox</label>
-                    </div>
-                </td>
-               <td className="py-2 px-4">Oxygen concentrator</td>
-                <td className="py-2 px-4">Blue</td>
-                <td className="py-2 px-4">100 pieces</td>
-                <td className="py-2 px-4">$200.00</td>
-                <td className="py-2 px-4">$2,000.00</td>
-                <td className="py-2 px-4">2024-08-07</td>
-                <td className="flex items-center px-6 py-4">
-                    <a href="#" className="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
-                    <a href="#" className="font-medium text-red-600 dark:text-red-500 hover:underline ms-3">Remove</a>
-                </td>
-            </tr>
-       
-        </tbody>
-    </table>
     <div className="overflow-x-auto">
-      <Table hoverable>
-        <Table.Head>
+    <Table className="w-full border border-gray-200 rounded-lg ">
+        <Table.Head className="capitalize"> 
           <Table.HeadCell className="p-4">
-            <Checkbox />
-          </Table.HeadCell>
-          <Table.HeadCell>Product name</Table.HeadCell>
-          <Table.HeadCell>Color</Table.HeadCell>
-          <Table.HeadCell>Category</Table.HeadCell>
+              <Checkbox />
+            </Table.HeadCell>
+          <Table.HeadCell>Items</Table.HeadCell>
+          <Table.HeadCell>Variants</Table.HeadCell>
+          <Table.HeadCell>Quantity</Table.HeadCell>
           <Table.HeadCell>Price</Table.HeadCell>
+          <Table.HeadCell>Expected Delivery Date</Table.HeadCell>
+          <Table.HeadCell>Amount</Table.HeadCell>
           <Table.HeadCell>
-            <span className="sr-only">Edit</span>
+            <span className="sr-only"></span>
           </Table.HeadCell>
         </Table.Head>
-        <Table.Body className="divide-y">
+        <Table.Body className="divide-y w-full">
           <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
             <Table.Cell className="p-4">
               <Checkbox />
             </Table.Cell>
             <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
-              {'Apple MacBook Pro 17"'}
+            <div className="flex items-center gap-2">
+              <div className="w-8 h-8 rounded-sm text-gray-950 grid place-items-center"><img src={MusicIcon} alt=""/>
+              </div>
+              <div className="my-3">
+                <h3 className="font-semibold text-sm">  Oxygen concentrator</h3>
+                <p className="text-xs text-gray-400">Clear street</p>
+              </div>
+            </div>
             </Table.Cell>
-            <Table.Cell>Sliver</Table.Cell>
-            <Table.Cell>Laptop</Table.Cell>
-            <Table.Cell>$2999</Table.Cell>
-            <Table.Cell>
-              <a href="#" className="font-medium text-cyan-600 hover:underline dark:text-cyan-500">
-                Edit
-              </a>
+            <Table.Cell className="w-auto">Blue</Table.Cell>
+            <Table.Cell className="w-auto">100 pieces</Table.Cell>
+            <Table.Cell className="w-auto">$200.00</Table.Cell>
+            <Table.Cell className="w-auto">$2000.00</Table.Cell>
+            <Table.Cell className="w-auto">2024-08-07</Table.Cell>
+            <Table.Cell className="w-auto">
+              <div className=" flex items-center gap-2">
+                <a href="#" className="font-medium text-blue-600 dark:text-blue-500 hover:underline"><FaEdit/></a>
+              <a href="#" className="font-medium text-red-600 dark:text-red-500 hover:underline ms-3"><FaTrashAlt /></a>
+              </div>
             </Table.Cell>
+              
           </Table.Row>
           <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
             <Table.Cell className="p-4">
               <Checkbox />
             </Table.Cell>
             <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
-              Microsoft Surface Pro
+            <div className="flex items-center gap-2">
+              <div className="w-8 h-8 rounded-sm text-gray-950 grid place-items-center"><img src={MusicIcon} alt=""/>
+              </div>
+              <div className="my-3">
+                <h3 className="font-semibold text-sm">  Oxygen concentrator</h3>
+                <p className="text-xs text-gray-400">Clear street</p>
+              </div>
+            </div>
             </Table.Cell>
-            <Table.Cell>White</Table.Cell>
-            <Table.Cell>Laptop PC</Table.Cell>
-            <Table.Cell>$1999</Table.Cell>
-            <Table.Cell>
-              <a href="#" className="font-medium text-cyan-600 hover:underline dark:text-cyan-500">
-                Edit
-              </a>
+            <Table.Cell className="w-auto">Blue</Table.Cell>
+            <Table.Cell className="w-auto">100 pieces</Table.Cell>
+            <Table.Cell className="w-auto">$200.00</Table.Cell>
+            <Table.Cell className="w-auto">$2000.00</Table.Cell>
+            <Table.Cell className="w-auto">2024-08-07</Table.Cell>
+            <Table.Cell className="w-auto">
+              <div className=" flex items-center gap-2">
+                <a href="#" className="font-medium text-blue-600 dark:text-blue-500 hover:underline"><FaEdit/></a>
+              <a href="#" className="font-medium text-red-600 dark:text-red-500 hover:underline ms-3"><FaTrashAlt /></a>
+              </div>
             </Table.Cell>
+              
           </Table.Row>
           <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
             <Table.Cell className="p-4">
               <Checkbox />
             </Table.Cell>
-            <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">Magic Mouse 2</Table.Cell>
-            <Table.Cell>Black</Table.Cell>
-            <Table.Cell>Accessories</Table.Cell>
-            <Table.Cell>$99</Table.Cell>
-            <Table.Cell>
-              <a href="#" className="font-medium text-cyan-600 hover:underline dark:text-cyan-500">
-                Edit
-              </a>
+            <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+            <div className="flex items-center gap-2">
+              <div className="w-8 h-8 rounded-sm text-gray-950 grid place-items-center"><img src={MusicIcon} alt=""/>
+              </div>
+              <div className="my-3">
+                <h3 className="font-semibold text-sm">  Oxygen concentrator</h3>
+                <p className="text-xs text-gray-400">Clear street</p>
+              </div>
+            </div>
             </Table.Cell>
+            <Table.Cell className="w-auto">Blue</Table.Cell>
+            <Table.Cell className="w-auto">100 pieces</Table.Cell>
+            <Table.Cell className="w-auto">$200.00</Table.Cell>
+            <Table.Cell className="w-auto">$2000.00</Table.Cell>
+            <Table.Cell className="w-auto">2024-08-07</Table.Cell>
+            <Table.Cell className="w-auto">
+              <div className=" flex items-center gap-2">
+                <a href="#" className="font-medium text-blue-600 dark:text-blue-500 hover:underline"><FaEdit/></a>
+              <a href="#" className="font-medium text-red-600 dark:text-red-500 hover:underline ms-3"><FaTrashAlt /></a>
+              </div>
+            </Table.Cell>
+              
           </Table.Row>
+          <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+            <Table.Cell className="p-4">
+              <Checkbox />
+            </Table.Cell>
+            <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+            <div className="flex items-center gap-2">
+              <div className="w-8 h-8 rounded-sm text-gray-950 grid place-items-center"><img src={MusicIcon} alt=""/>
+              </div>
+              <div className="my-3">
+                <h3 className="font-semibold text-sm">  Oxygen concentrator</h3>
+                <p className="text-xs text-gray-400">Clear street</p>
+              </div>
+            </div>
+            </Table.Cell>
+            <Table.Cell className="w-auto">Blue</Table.Cell>
+            <Table.Cell className="w-auto">100 pieces</Table.Cell>
+            <Table.Cell className="w-auto">$200.00</Table.Cell>
+            <Table.Cell className="w-auto">$2000.00</Table.Cell>
+            <Table.Cell className="w-auto">2024-08-07</Table.Cell>
+            <Table.Cell className="w-auto">
+              <div className=" flex items-center gap-2">
+                <a href="#" className="font-medium text-blue-600 dark:text-blue-500 hover:underline"><FaEdit/></a>
+              <a href="#" className="font-medium text-red-600 dark:text-red-500 hover:underline ms-3"><FaTrashAlt /></a>
+              </div>
+            </Table.Cell>
+              
+          </Table.Row>
+         
         </Table.Body>
       </Table>
       </div>
@@ -212,7 +238,7 @@ const QuoteDetails = () => {
   
 <div className="p-3 border border-gray-200 w-full rounded-lg flex items-center justify-between">
 <div className="flex items-center gap-2">
-              <div className="w-8 h-8 rounded-full bg-orange-100 text-gray-950 grid place-items-center"><SignDocSvg />
+              <div className="w-8 h-8 text-gray-950 grid place-items-center"><SignDocSvg />
               </div>
               <div className="my-3">
                 <h3 className="font-semibold text-sm">Terms and Attachments</h3>
