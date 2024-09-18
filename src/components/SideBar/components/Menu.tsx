@@ -35,7 +35,7 @@ export default function Menu() {
       case "link":
         // BASIC LINK
         return (
-          <li className={`w-full py-2 px-4 text-gray-600 has-[.active]:bg-blue-100 hover:bg-blue-100 hover:text-blue-600 rounded`} key={item.id}>
+          <li className={`w-full py-2 px-4 text-gray-600 dark:text-gray-300 has-[.active]:bg-blue-100 hover:bg-blue-100 hover:text-blue-600 rounded`} key={item.id}>
             <NavLink
               to={item.url}
               className={({isActive})=>isActive ? "active" : ""+" flex items-center justify-between"}
@@ -55,7 +55,7 @@ export default function Menu() {
         return (
           <li className="block w-full" key={item.id}>
             <div
-              className={`flex items-center  py-2 px-4 justify-between ${ item.id === activeLink? " bg-blue-100 " :""} text-gray-600 hover:bg-blue-100 hover:text-blue-600 rounded`}
+              className={`flex items-center  py-2 px-4 justify-between ${ item.id === activeLink? " bg-blue-100 dark:text-blue-700" :""} text-gray-600 dark:text-gray-300  hover:bg-blue-100 hover:text-blue-600 rounded`}
               key={item.id}
               onClick={() => handleToggleMenu(item.id)}
             >
@@ -77,7 +77,7 @@ export default function Menu() {
             >
               {item.subMenu?.map((link, i): JSX.Element | undefined => {
                 return (
-                  <li className={`py-2 px-4 text-gray-600 hover:bg-blue-100 hover:text-blue-600 rounded`} key={"subMenu_" + i}>
+                  <li className={`py-2 px-4 text-gray-600 dark:text-gray-300 hover:bg-blue-100 hover:text-blue-600 rounded`} key={"subMenu_" + i}>
                     <NavLink
                       to={link.url} className={({isActive})=> isActive ? "active" : ""}
                     >

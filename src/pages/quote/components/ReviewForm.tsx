@@ -1,4 +1,4 @@
-import { Button, Modal, Spinner } from "flowbite-react";
+import { Modal, Spinner } from "flowbite-react";
 import React from "react";
 import { FiEdit } from "react-icons/fi";
 import { Toast } from "../../../app/utils/toast";

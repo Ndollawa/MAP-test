@@ -4,6 +4,7 @@ import { RxCross2 } from "react-icons/rx";
 import { Link } from "react-router-dom";
 import { Checkbox, Table } from "flowbite-react";
 import { FaEdit, FaTrashAlt } from "react-icons/fa";
+import { tableTheme } from "../../../app/utils/flowbiteThemes";
 
 const QuoteDetails = () => {
     return (
@@ -91,7 +92,7 @@ const QuoteDetails = () => {
   <h3 className="font-bold mb-5 text-base">Item(s)</h3>
 <div className="relative overflow-x-auto  sm:rounded-lg">
     <div className="overflow-x-auto">
-    <Table className="w-full border border-gray-200 rounded-lg ">
+    <Table className="w-full  rounded-lg " theme={tableTheme}>
         <Table.Head className="capitalize"> 
           <Table.HeadCell className="p-4">
               <Checkbox />
@@ -107,7 +108,7 @@ const QuoteDetails = () => {
           </Table.HeadCell>
         </Table.Head>
         <Table.Body className="divide-y w-full">
-          <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+          <Table.Row className="bg-white dark:border-gray-800 dark:bg-gray-900">
             <Table.Cell className="p-4">
               <Checkbox />
             </Table.Cell>
@@ -134,7 +135,7 @@ const QuoteDetails = () => {
             </Table.Cell>
               
           </Table.Row>
-          <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+          <Table.Row className="bg-white dark:border-gray-800 dark:bg-gray-900">
             <Table.Cell className="p-4">
               <Checkbox />
             </Table.Cell>
@@ -161,7 +162,7 @@ const QuoteDetails = () => {
             </Table.Cell>
               
           </Table.Row>
-          <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+          <Table.Row className="bg-white dark:border-gray-800 dark:bg-gray-900">
             <Table.Cell className="p-4">
               <Checkbox />
             </Table.Cell>
@@ -188,7 +189,7 @@ const QuoteDetails = () => {
             </Table.Cell>
               
           </Table.Row>
-          <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+          <Table.Row className="bg-white dark:border-gray-800 dark:bg-gray-900">
             <Table.Cell className="p-4">
               <Checkbox />
             </Table.Cell>

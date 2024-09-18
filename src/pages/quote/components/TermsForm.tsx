@@ -19,6 +19,7 @@ const TermsForm = ({ onNext, onPrev }) => {
         <div className="mb-2 block">
           <Label htmlFor="paymentTerms" value="Payment Terms" />
         
+                    </div>
           <Select
                       {...register(`paymentTerms`, { required: true })}
                       id="paymentTerms"
@@ -30,12 +31,12 @@ const TermsForm = ({ onNext, onPrev }) => {
                         </option>
                       ))}
                     </Select>
-                    </div>
         </div>
         <div>
          
         <div className="mb-2 block">
           <Label htmlFor="deliverySchedule" value="Delivery Schedule" />
+                    </div>
           <Select
                       {...register(`deliverySchedule`, { required: true })}
                       id="deliverySchedule"
@@ -47,13 +48,13 @@ const TermsForm = ({ onNext, onPrev }) => {
                         </option>
                       ))}
                     </Select>
-                    </div>
         </div>
 
 
         <div>
         <div className="mb-2 block">
           <Label htmlFor="shippingMethod" value="Shipping Method" />
+          </div>
           <Select
                       {...register(`shippingMethod`, { required: true })}
                       id="shippingMethod"
@@ -65,7 +66,6 @@ const TermsForm = ({ onNext, onPrev }) => {
                         </option>
                       ))}
                     </Select>
-                    </div>
         </div>
           <div>
               <div className="mb-2 block">
@@ -91,7 +91,7 @@ const TermsForm = ({ onNext, onPrev }) => {
       <div className="flex items-center justify-center w-fit">
         <Label
           htmlFor="dropzone-file"
-          className="flex h-64 p-8 w-full cursor-pointer flex-col items-center justify-center rounded-lg border-2 border-dashed border-gray-300 bg-gray-50 hover:bg-gray-100 dark:border-gray-600 dark:bg-gray-700 dark:hover:border-gray-500 dark:hover:bg-gray-600"
+          className="flex h-64 p-8 w-full cursor-pointer flex-col items-center justify-center rounded-lg border-2 border-dashed border-gray-300 bg-gray-50 hover:bg-gray-100 dark:border-gray-600 dark:bg-gray-900 dark:hover:border-gray-500 dark:hover:bg-gray-600"
         >
           <div className="flex flex-col items-center justify-center pb-6 pt-5">
             <svg

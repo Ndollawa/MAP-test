@@ -6,7 +6,7 @@ import MessageDropDown from './comonents/MessageDropDown';
 
 const Navbar = () => {
   return (
-    <nav className="bg-white shadow-sm w-full grid grid-cols-12 gap-0 p-4 mr-10  justify-items-stretch items-center relative">
+    <nav className="bg-white dark:bg-gray-950 shadow-sm dark:shadow-white w-full grid grid-cols-12 gap-0 p-4 mr-10  justify-items-stretch items-center relative">
       <div className='justify-self-start col-span-5 flex items-center gap-1 cursor-pointer relative'>
           <IoIosArrowBack /><span>Back</span>
       </div>
@@ -22,7 +22,7 @@ const Navbar = () => {
                         <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
                     </svg>
                 </div>
-                <input type="search" id="search" className="block w-full p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search" required />
+                <input type="search" id="search" className="block w-full p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-900 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search" required />
                 </div>
         </form>
 
@@ -44,7 +44,7 @@ const Navbar = () => {
             className="w-8 h-8 rounded-full"
             src={UserImage}
             alt="User profile"
-          />   <span className="text-gray-600"><IoIosArrowDown size={'1rem'}/></span>
+          />   <span className="text-gray-900 dark:text-gray-400"><IoIosArrowDown size={'1rem'}/></span>
           </div>}>
             <Dropdown.Item as='a' href="#">Dashboard</Dropdown.Item>
             <Dropdown.Item as='a' href="#">Settings</Dropdown.Item>

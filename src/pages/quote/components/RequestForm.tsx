@@ -135,7 +135,7 @@ const RequestForm = ({ onNext }: any) => {
         </Table.Head>
         <Table.Body className="divide-y">
             {fields.map((field, index) => (
-          <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800" key={field.id}>
+          <Table.Row className="bg-white dark:border-gray-800 dark:bg-gray-900" key={field.id}>
             <Table.Cell className="w-auto p-2 whitespace-nowrap font-medium text-gray-900 dark:text-white">
                <TextInput  className=""
                       sizing="sm"
@@ -233,7 +233,8 @@ const RequestForm = ({ onNext }: any) => {
 
           {/* Textarea with Word Counter */}
           <div className="max-w-md">
-            <Label htmlFor="note" value="Your message" />
+            <div className="mb-5"><Label htmlFor="note" value="Your message" className=""/></div>
+           
             <Textarea
               {...register("note", { required: true })}
               id="note"

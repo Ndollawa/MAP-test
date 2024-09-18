@@ -8,7 +8,7 @@ const DashboardLayout = () => {
 // // console.log(response) 
   return (
     <>
-        <div className="flex h-screen relative bg-white dark:bg-gray-900 w-full">
+        <div className="flex h-screen relative bg-white dark:bg-gray-950 w-full">
         <Sidebar />
         <div className="ml-56 p-0 w-full relative">
             <Navbar/>
